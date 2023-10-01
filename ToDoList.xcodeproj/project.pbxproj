@@ -35,6 +35,7 @@
 		825B7CF32AC97B63007A78DD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B7CF22AC97B63007A78DD /* LoginViewModel.swift */; };
 		825B7CF52AC97B75007A78DD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B7CF42AC97B75007A78DD /* RegisterViewModel.swift */; };
 		825B7CF72AC97B8B007A78DD /* TodolistItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B7CF62AC97B8B007A78DD /* TodolistItemsViewModel.swift */; };
+		825B7CFA2AC98AB4007A78DD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B7CF92AC98AB4007A78DD /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		825B7CF22AC97B63007A78DD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		825B7CF42AC97B75007A78DD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		825B7CF62AC97B8B007A78DD /* TodolistItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemsViewModel.swift; sourceTree = "<group>"; };
+		825B7CF92AC98AB4007A78DD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				825B7CDF2AC97997007A78DD /* LoginView.swift */,
 				825B7CE12AC979A3007A78DD /* RegisterView.swift */,
 				825B7CE42AC97A0E007A78DD /* TodoListItemView.swift */,
+				825B7CF92AC98AB4007A78DD /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				825B7CF12AC97B56007A78DD /* NewItemsViewModel.swift in Sources */,
+				825B7CFA2AC98AB4007A78DD /* HeaderView.swift in Sources */,
 				825B7CE92AC97ADB007A78DD /* TodoListItem.swift in Sources */,
 				825B7CE02AC97997007A78DD /* LoginView.swift in Sources */,
 				825B7CF52AC97B75007A78DD /* RegisterViewModel.swift in Sources */,
