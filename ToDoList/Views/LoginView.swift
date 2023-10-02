@@ -14,7 +14,7 @@ struct LoginView: View {
         NavigationView {
             VStack{
                 //header
-                HeaderView()
+                HeaderView(title: "To Do List", subtitle: "Get Things Done", angle: 15, background: .pink)
                 
                 //login Form
                 Form{
@@ -32,7 +32,7 @@ struct LoginView: View {
                         
                     }
                 }
-                }
+                }.offset(y:-50)
                 
                 //Registration Button
                 VStack{
