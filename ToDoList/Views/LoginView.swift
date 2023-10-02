@@ -16,16 +16,22 @@ struct LoginView: View {
                 HeaderView(title: "To Do List", subtitle: "Get Things Done", angle: 15, background: .pink)
                 
                 //login Form
+                
                 Form{
+                    if !viewModel.errorMessage.isEmpty{
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
+                
+                    }
                     TextField("Email Address", text:$viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
                     SecureField("Password", text:$viewModel.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .autocapitalization(.none)
+                        
                     TldButtonView(title: "Log In", background: .blue){
                         //login Attempt
+                        viewModel.login()
                     }.padding()
                 }.offset(y:-50)
                 
