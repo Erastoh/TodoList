@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State var name = ""
     @State var email = ""
     @State var password = ""
     var body: some View {
@@ -17,32 +18,29 @@ struct RegisterView: View {
             
             //login Form
             Form{
-                TextField("Name", text:$email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Full Name", text:$name)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
                 TextField("Email Address", text:$email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 SecureField("Password", text:$password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button {
-                    //attempt to Login in
-                }
-            label: {
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10).foregroundColor(Color.blue)
-                    Text("Log In").bold().foregroundColor(Color.white)
-                    
-                }
-            }
-            }
-            
-            //Registration Button
-            VStack{
-                Text("New around here?")
-            
-                NavigationLink("Create Account",
-                               destination: RegisterView())
-            }.padding(.bottom, 50
-            )
+                    .textFieldStyle(DefaultTextFieldStyle())
+//                Button {
+//                    //attempt to Login in
+//                }
+//            label: {
+//                ZStack{
+//                    RoundedRectangle(cornerRadius: 10).foregroundColor(Color.blue)
+//                    Text("Create Account").bold().foregroundColor(Color.white)
+//
+//                }
+//            }
+                TldButtonView(title: "Create Account", background: .green){
+                    // Attempt Registration
+                }.padding()
+            }.offset(y: -50)
             
             Spacer()
         }
