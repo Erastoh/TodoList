@@ -37,6 +37,7 @@ struct RegisterView: View {
 //            }
                 TldButtonView(title: "Create Account", background: .green){
                     // Attempt Registration
+                    registerView.createAccount()
                 }.padding()
             }.offset(y: -50)
             
