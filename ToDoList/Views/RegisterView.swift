@@ -16,6 +16,12 @@ struct RegisterView: View {
             
             //login Form
             Form{
+                
+                if !registerView.errorMessage.isEmpty{
+                    Text(registerView.errorMessage)
+                        .foregroundColor(Color.red)
+            
+                }
                 TextField("Full Name", text:$registerView.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()

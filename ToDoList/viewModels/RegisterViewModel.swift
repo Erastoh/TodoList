@@ -12,6 +12,7 @@ class RegisterViewModel: ObservableObject{
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
+    @Published var errorMessage = ""
     
     init(){}
     
@@ -40,17 +41,20 @@ class RegisterViewModel: ObservableObject{
     }
     
     private func Validate() -> Bool{
+        errorMessage = ""
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
            !email.trimmingCharacters(in: .whitespaces).isEmpty,
            !password.trimmingCharacters(in: .whitespaces).isEmpty else{
-            
+            errorMessage = "Please Fill All Spaces"
             return false
         }
         guard email.contains("@") && email.contains(".") else{
+            errorMessage = "Enter Valid Email"
             return false
         }
         
         guard password.count > 6 else{
+            errorMessage = "Password Should Contain 6 char or more"
             return false
         }
         
