@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TodoListView: View {
     var body: some View {
-        VStack{
-            HeaderView(title: "Home Page", subtitle: "Get Things Done", angle: 15, background: .pink)
+        NavigationView{
+            VStack{
+                
+            }.navigationTitle("Profile")
         }
     }
 }
