@@ -12,7 +12,15 @@ struct TodoListView: View {
         NavigationView{
             VStack{
                 
-            }.navigationTitle("Profile")
+            }
+            .navigationTitle("To Do List")
+            .toolbar{
+                Button{
+                    
+                }label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
