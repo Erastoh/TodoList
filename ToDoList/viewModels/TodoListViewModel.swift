@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Model for sinqle items
 class TodoListViewModel: ObservableObject{
     init(){
         

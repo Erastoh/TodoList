@@ -37,7 +37,7 @@
 		825B7CFA2AC98AB4007A78DD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B7CF92AC98AB4007A78DD /* HeaderView.swift */; };
 		82917C8D2ACB2B7E00D05250 /* TldButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917C8C2ACB2B7E00D05250 /* TldButtonView.swift */; };
 		82917C8F2ACC3D1000D05250 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917C8E2ACC3D1000D05250 /* Extensions.swift */; };
-		82917C922ACC584200D05250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82917C912ACC584200D05250 /* GoogleService-Info.plist */; };
+		82CDDAB22AD3D8BF00D8751E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CDDAB12AD3D8BF00D8751E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		825A82F52ABF68C400678AE3 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		825A82F92ABF68C400678AE3 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		825A82FB2ABF68C400678AE3 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		825B7CD82AC9765B007A78DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		825B7CD92AC97937007A78DD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		825B7CDB2AC97953007A78DD /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		825B7CDD2AC97973007A78DD /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
@@ -88,7 +87,7 @@
 		825B7CF92AC98AB4007A78DD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		82917C8C2ACB2B7E00D05250 /* TldButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TldButtonView.swift; sourceTree = "<group>"; };
 		82917C8E2ACC3D1000D05250 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		82917C912ACC584200D05250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82CDDAB12AD3D8BF00D8751E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +143,6 @@
 		825A82DC2ABF68C200678AE3 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				82917C912ACC584200D05250 /* GoogleService-Info.plist */,
 				825B7CD72AC975F8007A78DD /* Models */,
 				825B7CD62AC975E8007A78DD /* viewModels */,
 				825B7CD52AC975E0007A78DD /* Views */,
@@ -183,7 +181,7 @@
 		825B7CD42AC975D6007A78DD /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				825B7CD82AC9765B007A78DD /* GoogleService-Info.plist */,
+				82CDDAB12AD3D8BF00D8751E /* GoogleService-Info.plist */,
 				825A82DD2ABF68C200678AE3 /* ToDoListApp.swift */,
 				825A82E12ABF68C400678AE3 /* Assets.xcassets */,
 				82917C8E2ACC3D1000D05250 /* Extensions.swift */,
@@ -212,10 +210,10 @@
 			children = (
 				825B7CEA2AC97B26007A78DD /* MainViewModel.swift */,
 				825B7CEC2AC97B34007A78DD /* ProfileViewModel.swift */,
-				825B7CEE2AC97B44007A78DD /* TodoListViewModel.swift */,
 				825B7CF02AC97B55007A78DD /* NewItemsViewModel.swift */,
 				825B7CF22AC97B63007A78DD /* LoginViewModel.swift */,
 				825B7CF42AC97B75007A78DD /* RegisterViewModel.swift */,
+				825B7CEE2AC97B44007A78DD /* TodoListViewModel.swift */,
 				825B7CF62AC97B8B007A78DD /* TodolistItemsViewModel.swift */,
 			);
 			path = viewModels;
@@ -346,7 +344,7 @@
 			files = (
 				825A82E62ABF68C400678AE3 /* Preview Assets.xcassets in Resources */,
 				825A82E22ABF68C400678AE3 /* Assets.xcassets in Resources */,
-				82917C922ACC584200D05250 /* GoogleService-Info.plist in Resources */,
+				82CDDAB22AD3D8BF00D8751E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
