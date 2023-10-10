@@ -8,6 +8,7 @@
 import Foundation
 // Model for sinqle items
 class TodoListViewModel: ObservableObject{
+    @Published var isShowingNewItemView = false
     init(){
         
     }
