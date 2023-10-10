@@ -21,11 +21,18 @@ struct NewItemView: View {
                 DatePicker("Due Date", selection: $viewModel.dueDate).datePickerStyle(GraphicalDatePickerStyle())
                 //Button
                 
-                TldButtonView(title: "Submit", background: .green){
-                    //
-                    viewModel.saveItem()
-//                    newItemPresented = false
+                TldButtonView(title: "Submit", background: .green)
+                  {
+                    if viewModel.canSave{
+                        viewModel.saveItem()
+    //                    newItemPresented = false
+                    }else{
+                        viewModel.showAlert = true
+                    }
+                    
                 }.padding()
+            }.alert(isPresented: $viewModel.showAlert){
+                Alert(title: Text("Error"), message: Text("Please Fill all the Fields and ensure you selected Due date greater than now"))
             }
             
             
