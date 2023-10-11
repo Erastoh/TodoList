@@ -13,8 +13,15 @@ struct NewItemView: View {
     var body: some View {
 //
         VStack{
-            Text("New Item").font(.system(size: 32)).bold().padding(.top, 100)
             
+            Button{
+                newItemPresented = false
+            }label: {
+                Image(systemName: "backward")
+            }.padding()
+            
+            Text("New Item").font(.system(size: 32)).bold().padding(.top, 80)
+               
             Form{
                 
                 TextField("Title", text: $viewModel.title ).textFieldStyle(DefaultTextFieldStyle())
