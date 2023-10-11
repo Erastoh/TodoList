@@ -26,6 +26,22 @@ class NewItemsViewModel: ObservableObject{
         guard let uuid = Auth.auth().currentUser?.uid else{
             return
         }
+        
+        //Create Model
+        let newUid = UUID().uuidString
+        let newItem = TodoListItem(
+            id: newUid,
+            title: title,
+            duedate: dueDate.timeIntervalSince1970,
+            createAt: Date().timeIntervalSince1970,
+            isDone: false)
+        //Save Model
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(uuid)
+            .collection("todos")
+            .document(newUid)
+            .setData(newItem.asDictionary())
     }
     
     var canSave: Bool{
