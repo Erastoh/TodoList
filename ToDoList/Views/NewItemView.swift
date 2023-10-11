@@ -17,7 +17,7 @@ struct NewItemView: View {
             Button{
                 newItemPresented = false
             }label: {
-                Image(systemName: "backward")
+                Image(systemName: "minus")
             }.padding()
             
             Text("New Item").font(.system(size: 32)).bold().padding(.top, 80)
@@ -33,11 +33,9 @@ struct NewItemView: View {
                 TldButtonView(title: "Submit", background: .green)
                   {
                     if viewModel.canSave{
-                        print("Reached here------------------clicked--")
                         viewModel.saveItem()
                         newItemPresented = false
                     }else{
-                        print("Reached here------------------cant show--")
                         viewModel.showAlert = true
                     }
                     
