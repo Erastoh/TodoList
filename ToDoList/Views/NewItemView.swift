@@ -9,15 +9,16 @@ import SwiftUI
 
 struct NewItemView: View {
     @StateObject var viewModel = NewItemsViewModel()
+    @Binding var newItemPresented: Bool
     var body: some View {
-//        @Binding var newItemPresented: Bool
+//
         VStack{
             Text("New Item").font(.system(size: 32)).bold().padding(.top, 100)
             
             Form{
-                //Title
+                
                 TextField("Title", text: $viewModel.title ).textFieldStyle(DefaultTextFieldStyle())
-                //Due Date
+                
                 DatePicker("Due Date", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 //Button
@@ -27,7 +28,7 @@ struct NewItemView: View {
                     if viewModel.canSave{
                         print("Reached here------------------clicked--")
                         viewModel.saveItem()
-    //                    newItemPresented = false
+                        newItemPresented = false
                     }else{
                         print("Reached here------------------cant show--")
                         viewModel.showAlert = true
@@ -46,10 +47,10 @@ struct NewItemView: View {
 struct NewItemView_Previews: PreviewProvider {
     static var previews: some View {
         NewItemView(
-//            newItemPresented: Binding(get: {
-//            return true
-//        }, set: { _ in
-//        })
+            newItemPresented: Binding(get: {
+            return true
+        }, set: { _ in
+        })
         )
     }
 }

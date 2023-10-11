@@ -28,7 +28,7 @@ struct TodoListView: View {
             }.sheet(isPresented: $viewModel.isShowingNewItemView){
               
                 NewItemView(
-//                    newItemPresented: $viewModel.isShowingNewItemView
+                    newItemPresented: $viewModel.isShowingNewItemView
                 )
             }
         }
