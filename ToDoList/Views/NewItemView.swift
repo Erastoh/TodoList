@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewItemView: View {
+    @StateObject var viewModel = NewItemsViewModel()
     var body: some View {
-        @StateObject var viewModel = NewItemsViewModel()
 //        @Binding var newItemPresented: Bool
         VStack{
             Text("New Item").font(.system(size: 32)).bold().padding(.top, 100)
@@ -18,15 +18,18 @@ struct NewItemView: View {
                 //Title
                 TextField("Title", text: $viewModel.title ).textFieldStyle(DefaultTextFieldStyle())
                 //Due Date
-                DatePicker("Due Date", selection: $viewModel.dueDate).datePickerStyle(GraphicalDatePickerStyle())
+                DatePicker("Due Date", selection: $viewModel.dueDate)
+                    .datePickerStyle(GraphicalDatePickerStyle())
                 //Button
                 
                 TldButtonView(title: "Submit", background: .green)
                   {
                     if viewModel.canSave{
+                        print("Reached here------------------clicked--")
                         viewModel.saveItem()
     //                    newItemPresented = false
                     }else{
+                        print("Reached here------------------cant show--")
                         viewModel.showAlert = true
                     }
                     
