@@ -29,7 +29,7 @@ struct TodoListView: View {
                                 viewModel.deleteItem(itemId: itemsList.id)
                             }.tint(.red)
                         }
-                }
+                }.listStyle(PlainListStyle())
             }
             .navigationTitle("To Do List")
             .toolbar{
